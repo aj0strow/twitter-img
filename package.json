@@ -4,7 +4,8 @@
   "dependencies": {
     "redis": "^0.10.3",
     "hiredis": "^0.1.17",
-    "appconfig": "0.0.1"
+    "appconfig": "0.0.1",
+    "twit": "^1.1.15"
   },
   "devDependencies": {
     "mocha": "^1.20.1"
