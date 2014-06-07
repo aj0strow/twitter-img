@@ -7,10 +7,17 @@
     "appconfig": "0.0.1",
     "twit": "^1.1.15",
     "lodash": "^2.4.1",
-    "express": "^4.4.1"
+    "express": "^4.4.1",
+    "morgan": "^1.1.1"
   },
   "devDependencies": {
     "mocha": "^1.20.1",
-    "supertest": "^0.13.0"
+    "supertest": "^0.13.0",
+    "memwatch": "^0.2.2"
+  },
+  "main": "server",
+  "scripts": {
+    "start": "node index",
+    "test": "mocha"
   }
 }
