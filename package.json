@@ -1,4 +1,12 @@
 {
   "name": "twitter-img",
-  "version": "0.0.0"
+  "version": "0.0.0",
+  "dependencies": {
+    "redis": "^0.10.3",
+    "hiredis": "^0.1.17",
+    "appconfig": "0.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^1.20.1"
+  }
 }
