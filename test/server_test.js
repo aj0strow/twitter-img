@@ -9,7 +9,7 @@ describe('server', function () {
   })
 
   it('should fetch and return images', function (done) {
-    supertest(server).get('/users/image')
+    supertest(server).get('/image')
       .query({ screen_name: 'aj0strow' })
       .expect('content-type', /image/)
       .expect(200, done)

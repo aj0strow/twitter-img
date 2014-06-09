@@ -13,7 +13,7 @@ Instead I prefer how Facebook does it using a dynamic image `src` returning the 
 You request an image.
 
 ```
-GET /users/image?screen_name=aj0strow
+GET /image?screen_name=aj0strow
 ```
 
 The server checks redis to get the most recent image url. If the screen\_name or user\_id has never been requested before, it fetches the user profile using the Twitter REST API v1.1 and updates the url store.
@@ -42,7 +42,9 @@ $ npm start
 
 ### Notes
 
-The server is an express app, so you can mount it as middleware. Redis keys are namespaced with `twitter-img` so should be safe to incorporate in a larger app. 
+The server is an express app and mounts as middleware. There is a root path, so make sure to mount on a path like `twitter-img`. 
+
+Redis keys are namespaced with `twitter-img` so should be safe to incorporate in a larger app as well. 
 
 After benchmarking I discovered it chokes on high concurrency Apache Bench tests. I think it has something to do with Twitter not appreciating tons of requests for the same image ignoring cache headers, because the stream is unexpectedly cut off mid-request. It also might be a slow internet connection at home, or that I simply wrote a shitty server. 
 

@@ -11,7 +11,7 @@ app.get('/', function (req, res) {
   res.json(pick(pkg, 'name', 'version', 'homepage'))
 })
 
-app.get('/users/image', function (req, res, next) {
+app.get('/image', function (req, res, next) {
   var user_id = req.param('user_id')
   var screen_name = req.param('screen_name')
   get_image(user_id, screen_name, function (e, img) {
